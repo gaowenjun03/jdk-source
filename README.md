@@ -412,7 +412,7 @@ e、size()：各HashEntry[] 之和，先不加锁算两遍，若一致则返回�
 2）JDK1.8
 a、Node{hash, key, value, next}
 b、Node[] table
-c、大多数操作类似于HashMap，不同CAS方式设置，根据key算hash，在根据hash和容量算index，对table[index]加锁，从而达到更大的并发量
+c、大多数操作类似于HashMap，不Object同CAS方式设置，根据key算hash，在根据hash和容量算index，对table[index]加锁，从而达到更大的并发量
 d、get(): 同HashMap
 e、put(): 对table[index]加锁
 
